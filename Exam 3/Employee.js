@@ -1,9 +1,7 @@
-
-
 const Record = () => {
     document.getElementById('Employe').innerHTML = ''
 
-    for (let i = 0; i < users.length; i++) {
+    for  (let i = 0; i < users.length; i++) {
         let tr = document.createElement('tr')
         let td = document.createElement('td')
         td.innerHTML=i+1;

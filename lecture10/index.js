@@ -62,5 +62,5 @@ const handleData = (event) =>
 }
 
 document.getElementById('userData').addEventListener("submit",handleData)
-document.getElementById('delete').addEventListener("click",AllRemove)
+document.getElementById('delete').addEventListener("click",AllRemove)git 
 
