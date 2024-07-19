@@ -1,6 +1,4 @@
-let str="rednwhite";
+let str="red&white";
 
-for(let i=0;i<str.length;i++)
-{
-console.log(str[i]);
-}
+
+console.log(str);
