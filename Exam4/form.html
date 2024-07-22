@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from id="userData">
+        <table>
+            <tr>
+               <td>Name :<br><br></td>
+                <td><input type="text" id="name" placeholder="Enter Name" required><br><br></td>
+            </tr>
+            <tr>
+                <td>Gr_id :<br><br></td>
+                <td><input type="number" id="number" placeholder="Enter Gr_id" required><br><br></td>
+            </tr>
+            <tr>
+                <td>Course :<br><br></td>
+                <td><select name="" id="course" >
+                    <option value="Data Science">Data Science</option>
+                    <option value="AI">AI</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Web Devloper">Web Devloper</option>
+                  </select><br><br></td>
+            </tr>
+            <tr>
+                <td>Number :<br><br></td>
+                <td><input type="text" id="number" placeholder="Enter Number" required><br><br></td>
+            </tr>
+            <tr>
+                <td>Fees :<br><br></td>
+                <td><select  id="fees" >
+                    <option value="Data Science">Data Science - 70000</option>
+                    <option value="AI">AI - 65000</option>
+                    <option value="Cyber Security">Cyber Security - 50000</option>
+                    <option value="Web Devloper">Web Devloper - 90000</option>
+                  </select><br><br></td>
+            </tr>
+            
+            <tr>
+                 <td colspan="2"><input type="submit" value="Sign Up"></td>
+             </tr>
+             </table>
+      </form> 
+             <table>
+            <thead>
+                <tr>
+                    <th scope="101">Name</th>
+                    <th scope="101">Gr_id</th>
+                    <th scope="101">Course</th>
+                    <th scope="101">Number</th>
+                    <th scope="101">Fees</th>
+                    <th scope="101">Delete</th>
+    
+                </tr>
+            </thead>
+        
+            
+            <tbody id="tbody"></tbody>
+         </table> 
+         <table>
+            <thead id="Sales">
+                <tr>
+                    <th scope="101">Course </th>
+                    <th scope="101"> Count </th>
+                    <th scope="101"> Total fees </th>
+                </tr>
+            </thead>
+            <tbody id="body">
+            </tbody>
+    
+        </table>   
+</body>
+<script src="./form.js"></script>
+</html>
