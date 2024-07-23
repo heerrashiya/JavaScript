@@ -10,7 +10,7 @@ const HandleData = (e) => {
         username: username,
         number: number,
         email: email,
-        password: password
+        password: password,
     }
 
     if (user.username.length < 2) {
