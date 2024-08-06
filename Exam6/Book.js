@@ -36,7 +36,7 @@ class Book{
         return this.#rentalPrice;
     }
 
-    setrentalPrice(rentalPrice)
+    setrentalPrice()
     {
         this.#rentalPrice=rentalPrice;
     }
@@ -55,19 +55,19 @@ class Book{
     {
         if(this.#copiesAvailable>0)
         {
-            this.#copiesAvailable--;
+            this.#copiesAvailable-=1;
             console.log(`${this.title} Book purchased`);
         }
         else
         {
-            console.log("copies are not available");
+            console.log("Sorry!copies are not available");
         }
     }
     rentBook()
     {
         if(this.#copiesAvailable>0)
             {
-                this.#copiesAvailable--;
+                this.#copiesAvailable-=1;
                 console.log(`${this.title} Book rented `);
             }
             else
@@ -89,10 +89,10 @@ class Book{
 }
 let book=new Book("The guide","R K Narayan",399,150,10)
 console.log(book);
-console.log("Author name  : ",book.getauthor());
+console.log("Author Name  : ",book.getauthor());
 console.log("Price :",book.getprice());
-console.log("rentalPrice : ",book.getrentalPrice());
-console.log("copiesAvailable : ",book.getcopiesAvailable());
+console.log("RentalPrice : ",book.getrentalPrice());
+console.log("CopiesAvailable : ",book.getcopiesAvailable());
 
 book.buyBook();
 book.checkAvailability();
