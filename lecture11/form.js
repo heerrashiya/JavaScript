@@ -12,7 +12,7 @@ const HandleData = (e) => {
         email: email,
         password: password,
     }
-
+ 
     if (user.username.length < 2) {
         alert("Please enter a valid name");
         return;

@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-    image{
+    <style>
+        img{
         height:300px;
-        width:800px;
+        width:1520px;
     }
+    </style>
+</head>
+
+    
 <body>
     <img src="image.jpg" alt="">
     <form id="data">
@@ -19,10 +23,12 @@
           </tr>
           <tr>
             <td>Price:<br><br></td>
+            <td>
                 <select id="Price"required>
                 <option value="300">300</option>
                 <option value="499">499</option>
                 <option value="479">479</option>
+            </td>
           </tr>
           <tr>
             <td>Color:<br><br></td>
@@ -35,15 +41,33 @@
             </td>
           </tr>
           <tr>
-            <td>Quentitie:<br><br></td>
+            <td>Quantity:<br><br></td>
             <td>
-                <input type="checkbox" id="Quentitie" name="1">1
-                <input type="checkbox" id="Quentitie" name="2">2<br><br>
-                <input type="checkbox" id="Quentitie" name="3">3
-                <input type="checkbox" id="Quentitie" name="4">4<br><br>
+                <input type="radio" name="Quantity" value="1"  required>1
+                <input type="radio" name="Quantity" value="2"  >2
+                <input type="radio" name="Quantity" value="3"  >3
+                <input type="radio" name="Quantity" value="4"  >4<br><br>
             </td>
              </tr>
-           </table>
+             <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+             </tr>
+
+             <table border="1px solid black">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Color</th>
+                        <th>Quentitie</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+        
+        
+                <tbody id="tbody"></tbody>
+            </table>
     </form>
 </body>
+<script src="./dragon.js"></script>
 </html>
