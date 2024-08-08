@@ -37,14 +37,14 @@ const HandleData = (e) => {
 
     let Name = document.getElementById('Name').value;
     let Price = document.getElementById('Price').value;
-    let Color = document.getElementById('Color').value;
+    let Colour = document.getElementById('Colour').value;
     let Quantity = document.getElementById('Quantity').value;
    
 
     let user = {
         Name: Name,
         Price: Price,
-        Color: Color,
+        Colour: Colour,
         Quantity: Quantity
        
 
