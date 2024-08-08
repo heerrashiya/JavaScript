@@ -15,13 +15,13 @@ const Dragon=()=>
         {
         let tr = document.createElement('tr')
         let td1 = document.createElement('td')
-        td1.innerHTML = users[i].name
+        td1.innerHTML = users[i].Name
         let td2 = document.createElement('td')
-        td2.innerHTML = users[i].price
+        td2.innerHTML = users[i].Price
         let td3 = document.createElement('td')
         td3.innerHTML = users[i].colour
         let td4 = document.createElement('td')
-        td4.innerHTML = users[i].quantity
+        td4.innerHTML = users[i].Quantity
         let td5 = document.createElement('td')
         td5.innerHTML = "remove";
         td5.addEventListener("click", () => Delete(i));
@@ -50,24 +50,24 @@ const HandleData = (e) => {
 
     }
 
-    if (name.length < 2) {
+    if (Name.length < 2) {
         alert("Enter valid name.");
         return;
     }
 
-    if(!price)
+    if(!Price)
         {
             alert("Please Select Price.");
             return;
         }
 
-        if(!colour)
+        if(!Colour)
             {
                 alert("Please Select Colour.");
                 return;
             }
 
-            if(!quantity)
+            if(!Quantity)
                 {
                     alert("Please Select Quantity.");
                     return;
