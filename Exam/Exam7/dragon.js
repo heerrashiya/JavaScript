@@ -59,7 +59,7 @@ const HandleData = (e) => {
         {
             alert("Please Select Price.");
             return;
-        }
+        } 
 
         if(!Colour)
             {
