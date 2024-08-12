@@ -54,9 +54,13 @@ const HandleData = (e) => {
         return;
     }
 
-    user .push(user);
+    users.push(user);
+    window.localStorage.setItem('Name',Name);
+    window.localStorage.setItem('Roll_no',Roll_no);
+    window.localStorage.setItem('Age',Age);
+    window.localStorage.setItem('Address',Address);
     console.log(users)
-    Student();
+    data();
 }
 
 document.getElementById('data').addEventListener("submit", HandleData)
