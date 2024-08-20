@@ -1,29 +1,28 @@
 function rollDice() {
-    // Generate a random number between 1 and 6
+  
     const diceRoll = Math.floor(Math.random() * 6) + 1;
 
-    // Get the dice element
+   
     const dice = document.getElementById('dice');
 
-    // Update the dice element based on the roll
     switch(diceRoll) {
         case 1:
-            dice.textContent = '⚀';
+            dice.textContent = '1';
             break;
         case 2:
-            dice.textContent = '⚁';
+            dice.textContent = '2';
             break;
         case 3:
-            dice.textContent = '⚂';
+            dice.textContent = '3';
             break;
         case 4:
-            dice.textContent = '⚃';
+            dice.textContent = '4';
             break;
         case 5:
-            dice.textContent = '⚄';
+            dice.textContent = '5';
             break;
         case 6:
-            dice.textContent = '⚅';
+            dice.textContent = '6';
             break;
     }
 }
