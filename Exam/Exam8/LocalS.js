@@ -58,10 +58,11 @@ const HandleData = (e) => {
     window.localStorage.setItem('Name',Name);
     window.localStorage.setItem('Roll_no',Roll_no);
     window.localStorage.setItem('Age',Age);
-    window.localStorage.setItem('Address',Address);
+    window.localStorage.setItem('Address',Address); 
     console.log(users)
     data();
 }
 
-document.getElementById('data').addEventListener("submit", HandleData)
+document.getElementById('data').addEventListener("submit", HandleData);
+
     
