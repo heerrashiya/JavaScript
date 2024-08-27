@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;      
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .profile {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .profile img {
+            width: 200px;
+            border-radius: 50%;
+        }
+        .news{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>NEWS APP</h1>
+    <ul>
+        <a href="">Home</a>
+        <a href="./add.html">Add News</a>
+        <a href="./signup.html">Signup</a>
+     </ul>
+     <div class="container">
+        <div class="profile">
+            <img src="img.jpg">
+            <p>username</p>
+        </div>
+        <div class="news">
+            <div class="news1">News 1</div>
+            <div class="news2">News 2</div>
+            <div class="news3">News 3</div>
+            <div class="news4">News 4</div>
+        </div>
+     </div>
+</body>
+<script src="./news.js"></script>
+</html>
