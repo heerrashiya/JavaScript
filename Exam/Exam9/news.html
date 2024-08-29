@@ -5,51 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+       
+        
         body {
             font-family: Arial, sans-serif;      
         }
-        .container {
-            display: flex;
-            padding: 20px;
+        h1{
+            font-size: 30px;
         }
-        .profile {
-            flex: 1;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-right: 20px;
+
+
+       .navbar{
+        height: 30px;
+       border-radius:8px ;
+        background-color: black;
+        color: aliceblue;
+
+       }
+       a{
+        margin-right: 320px;
+        color: aliceblue;
+       }
+
+        p{
+            margin-left: 70px;
+            text-decoration: solid ; 
         }
+          
         .profile img {
-            width: 200px;
+
+            padding: 30px;
+            height: 200px;
             border-radius: 50%;
-        }
-        .news{
-            display:grid;
-            grid-template-columns: repeat(2,1fr);
-            
-        }
+        } 
     </style>
 </head>
 <body>
     
     <h1>NEWS APP</h1>
-    <ul>
-        <a href="">Home</a>
-        <a href="./add.html">Add News</a>
-        <a href="./signup.html">Signup</a>
-     </ul>
-     <div class="container">
+   <div class="navbar">
+    <a href="">Home</a>
+    <a href="./add.html">Add</a>
+    <a href="./signup.html">singup</a>
+   </div>
+   
+     
         <div class="profile">
             <img src="img.jpg">
-            <p>username</p>
-        </div>
-        <div class="news">
-            <div class="news1">News 1</div>
-            <div class="news2">News 2</div>
-            <div class="news3">News 3</div>
-            <div class="news4">News 4</div>
-        </div>
-     </div>
+           <b> <p>Username</p></b>  
+    </div>
+   
 </body>
 <script src="./news.js"></script>
 </html>
