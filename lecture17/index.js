@@ -1,6 +1,7 @@
 const map=(products)=>{
     document.getElementById("productList").innerHTML=""
-    products.map((list,index)=>{
+    products.map((list,index)=>
+        {
         let title = document.createElement("h3");
         title.innerHTML = list.title;
         let price = document.createElement("p");
