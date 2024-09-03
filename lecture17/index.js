@@ -19,5 +19,17 @@ const map=(products)=>{
 
     });
 };
+if (isMatched.length > 0) {
+    alert("login success")
+     
+    localStorage.setItem("username",isMatched[0].username)
+
+
+    localStorage.setItem("isLogin", true)
+   
+  }
+  else {
+    alert("login failure")
+  }
 
 mapper(products);

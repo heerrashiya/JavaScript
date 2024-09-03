@@ -13,10 +13,12 @@ const handleData=(e)=>{
         email:getValue('.email'),
         password:getValue('.password'),
     };
+
+
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
 
-    window.location.href="/Project/home.html"
+
 }
 
 document.querySelector('#userdata').addEventListener("submit",handleData);
