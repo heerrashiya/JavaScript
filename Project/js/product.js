@@ -7,7 +7,7 @@ document.getElementById("navbar").innerHTML = Navbar();
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 const mapper = (data) => {
-    document.getElementById("productlist").innerHTML = "";
+    document.getElementById("productList").innerHTML = "";
     data.map((ele) => {
         let img = createTag("img", ele.img);
         let price = createTag("p", ele.price);
@@ -16,7 +16,7 @@ const mapper = (data) => {
         let buyBtn = createTag("button", "Buy");
         let div = document.createElement("div");
         div.append(img, title, price, category, buyBtn);
-        document.getElementById("productlist").append(div);
+        document.getElementById("productList").append(div);
     });
 };
 
