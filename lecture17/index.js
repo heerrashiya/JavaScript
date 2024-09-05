@@ -33,3 +33,33 @@ if (isMatched.length > 0) {
   }
 
 mapper(products);
+
+
+
+import { createTag } from "../components/helper.js";
+import Navbar from "../components/navbar.js";
+
+document.getElementById("navbar").innerHTML = Navbar();
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+
+
+const mapper = (data) => {
+
+    data.map((ele) => {
+
+        let img = createTag("img", ele.img)
+        let price = createTag("price", ele.price)
+        let title = createTag("title", ele.title)
+        let category = createTag("category", ele.category)
+        
+        let div = document.createElement("div")
+        div.append(img, title, price, category)
+        document.getElementById("productList").append(div)
+    })
+
+}
+
+
+mapper(products)
