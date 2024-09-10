@@ -22,3 +22,54 @@ const mapper = (data) => {
 
 mapper(products);
 
+const handleSort = (orderBy) => {
+    if (orderBy == "lth") {
+        let temp = products.sort((a, b) => a.price - b.price);
+
+        mapper(temp);
+    } else {
+        let temp = products.sort((a, b) => b.price - a.price);
+
+        mapper(temp);
+    }
+};
+const handlesort = (orderBy) =>
+     {
+    if (orderBy == "lth") {
+        let temp = products.sort((a, b) => a.price - b.price);
+
+        mapper(temp);
+    }
+     else 
+     {
+        let temp = products.sort((a, b) => b.price - a.price);
+
+        mapper(temp);
+    }
+};
+
+
+const handleCategory = (category) => {
+    let temp = products.filter((ele) => ele.category == category);
+    mapper(temp);
+        };
+document.getElementById("lth").addEventListener("click", () => handleSort("lth"));
+document.getElementById("htl").addEventListener("click", () => handleSort("htl"));
+
+document.getElementById("men").addEventListener("click", () => handleCategory("men"));
+document .getElementById("women") .addEventListener("click", () => handleCategory("women"));
+
+document.getElementById("electronics").addEventListener("click", () => handleCategory("electronics"));
+
+
+const search = (e) => {
+    e.preventDefault();
+
+    let searchValue = getValue("#search");
+    let temp = products.filter((ele) => ele.title.toLowerCase().includes(searchValue.toLowerCase()));
+    mapper(temp);
+
+};
+
+document.getElementById("searching").addEventListener("submit", search);
+
