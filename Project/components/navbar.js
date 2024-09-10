@@ -32,8 +32,12 @@ let username=localStorage.getItem("username")
             </li>
            
           </ul>
-           <form class="d-flex" role="search" id="searching">
-              <input class="form-control me-2"type="search" placeholder="Searcharia-label="Search" id="search/>
+              <form class="d-flex" role="search" id="searching">
+              <input class="form-control me-2"type="search" placeholder="Search" aria-label="Search" id="search"/>
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
         </div>
       </div>
     </nav>
