@@ -6,6 +6,32 @@ document.getElementById("navbar").innerHTML = Navbar();
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
+const isExist = (id) => {
+
+
+    let control = false;
+    cart.map((ele, i) => {
+
+        if (ele.id == id) {
+            cart[i].qty = cart[i].qty + 1
+            control = true;
+            alert("qty added")
+        }
+    })
+    return control;
+}
+const handleCart = (ele) => {
+    if (!isExist(ele.id)) {
+
+        cart.push({ ...ele, qty: 1 });
+        alert("added ");
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+
+}
+
 const mapper = (data) => {
     document.getElementById("productList").innerHTML = "";
     data.map((ele) => {
