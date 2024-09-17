@@ -35,7 +35,7 @@ const handleSort = (orderBy) => {
 };
 const handlesort = (orderBy) =>
      {
-    if (orderBy == "lth") {
+    if (orderBy == "htl") {
         let temp = products.sort((a, b) => a.price - b.price);
 
         mapper(temp);
