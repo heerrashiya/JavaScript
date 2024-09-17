@@ -6,6 +6,23 @@ document.getElementById("navbar").innerHTML = Navbar();
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
+
+
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+const isExist = (id) => {
+    let tag = false;
+    cart.map((ele, i) => {
+
+        if (ele.id == id) {
+            cart[i].qty = cart[i].qty + 1
+            tag = true;
+            alert(" added")
+        }
+    })
+    return tag;
+}
+
 const mapper = (data) => {
     document.getElementById("productList").innerHTML = "";
     data.map((ele) => {
@@ -19,6 +36,19 @@ const mapper = (data) => {
         document.getElementById("productList").append(div);
     });
 };
+
+const handleCart = (ele) => {
+    if (!isExist(ele.id)) {
+
+        cart.push({ ...ele, qty: 1 });
+        alert("added to cart");
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    console.log(cart);
+
+}
 
 mapper(products);
 
