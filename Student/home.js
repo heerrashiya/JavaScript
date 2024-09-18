@@ -2,7 +2,7 @@ import Navbar from "./navbar.js";
 
 document.getElementById("navbar").innerHTML=Navbar();
 
-const map=(products)=>{
+const mapper=(student)=>{
     document.getElementById("studentList").innerHTML=""
     students.map((list,index)=>
         {
@@ -10,6 +10,8 @@ const map=(products)=>{
         name.innerHTML = list.name;
         let age = document.createElement("p");
         age.innerHTML = list.age;
+        let number = document.createElement("p");
+        number.innerHTML = list.number;
         let email = document.createElement("p");
         email.innerHTML = list.email;
         let coures = document.createElement("p");
