@@ -1,8 +1,7 @@
 
 
 const Navbar = () => {
-    let islogin=localStorage.getItem("islogin") || false
-    let username=localStorage.getItem("username")
+    
       return `
      <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -16,7 +15,7 @@ const Navbar = () => {
                   <a class="nav-link active" aria-current="page" href="/Student/home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/Project/page/product.html">Add</a>
+                  <a class="nav-link" href="/Student/student.html">Add</a>
                 </li> 
               </ul>
                   <form class="d-flex" role="search" id="searching">
