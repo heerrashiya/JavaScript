@@ -2,25 +2,25 @@ import Navbar from "./navbar.js";
 
 document.getElementById("navbar").innerHTML=Navbar();
 
-let users = JSON.parse(localStorage.getItem("users")) || [];
+let student = JSON.parse(localStorage.getItem("student")) || [];
 
 const mapper = (data) => {
-document.getElementById("tbody").innerHTML = "";
-  data.forEach((user) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${user.name}</td>
-      <td>${user.age}</td>
-      <td>${user.phone}</td>
-      <td>${user.fee}</td>
-      <td>${user.course}</td>
-    `;
-    document.getElementById("tbody").append(row);
-  });
+    document.getElementById("studentList").innerHTML = "";
+    data.map((ele) => {
+      
+        let name = createTag("img", ele.name);
+        let age = createTag("p", ele.age);
+        let number = createTag("h3", ele.number);
+        let email = createTag("p", ele.email);
+        let fee = createTag("h3", ele.fee);
+        let coures = createTag("h3", ele.coures);
+        let div = document.createElement("div");
+        div.append(name, age, number, email,fee,coures);
+        document.getElementById("studentList").append(div);
+    });
 };
 
-
-mapper(users);
+mapper(student);
 
 const handleSort = (orderBy) => {
     if (orderBy == "lth") {
