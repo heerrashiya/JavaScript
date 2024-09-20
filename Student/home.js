@@ -2,28 +2,26 @@ import Navbar from "./navbar.js";
 
 document.getElementById("navbar").innerHTML=Navbar();
 
-const mapper=(student)=>{
-    document.getElementById("studentList").innerHTML=""
-    students.map((list,index)=>
-        {
-        let name = document.createElement("h3");
-        name.innerHTML = list.name;
-        let age = document.createElement("p");
-        age.innerHTML = list.age;
-        let number = document.createElement("p");
-        number.innerHTML = list.number;
-        let email = document.createElement("p");
-        email.innerHTML = list.email;
-        let coures = document.createElement("p");
-        coures.innerHTML = list.coures;
-        let div=document.createElement("div")
-        div.append(name,age,email,coures);
-        document.getElementById("studentList").append(div);
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    });
+const mapper = (data) => {
+document.getElementById("tbody").innerHTML = "";
+  data.forEach((user) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${user.name}</td>
+      <td>${user.age}</td>
+      <td>${user.phone}</td>
+      <td>${user.fee}</td>
+      <td>${user.course}</td>
+    `;
+    document.getElementById("tbody").append(row);
+  });
 };
 
-mapper(students);
+
+mapper(users);
+
 const handleSort = (orderBy) => {
     if (orderBy == "lth") {
         let stu = students.sort((a, b) => a.fee - b.fee);
@@ -46,7 +44,7 @@ const handlesort = (orderBy) =>
    }
     else 
     {
-       let temp = students.sort((a, b) => b.fee - a.fee);
+       let stu = students.sort((a, b) => b.fee - a.fee);
 
        mapper(stu);
    }
@@ -59,7 +57,7 @@ const handleCategory = (Coures) => {
 
 document.getElementById("lth").addEventListener("click", () => handleSort("lth"));
 
-document.getElementById("htl").addEventListener("click", () => handleSort("htl"));
+document.getElementById("htl").addEventListener("click", () => handlesort("htl"));
 
 document.getElementById("fullstack").addEventListener("click", () => handleCategory("fullstack"));
 
@@ -79,3 +77,9 @@ const search = (e) => {
 };
 
 document.getElementById("searching").addEventListener("submit", search);
+
+document.getElementById("search").addEventListener("keypress", (e) => {
+    if(e.key=="Enter"){
+      
+    }
+    });
