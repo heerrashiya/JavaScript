@@ -22,3 +22,9 @@ const handleData=(e)=>{
 }
 
 document.querySelector('#userdata').addEventListener("submit",handleData);
+
+
+
+
+
+
